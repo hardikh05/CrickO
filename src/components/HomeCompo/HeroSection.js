@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const containerVariants = {
   visible: { opacity: 1, transition: { staggerChildren: 0.5 } },
@@ -13,7 +13,7 @@ const itemVariants = {
 };
 
 const buttonVariants = {
-  hover: { scale: 1.1, transition: { yoyo: Infinity, duration: 1.0 } }
+  hover: { scale: 1.1, transition: { yoyo: Infinity, duration: 1.0 } },
 };
 
 // Updated image URLs
@@ -108,6 +108,7 @@ const HeroSection = () => {
               whileHover="hover"
               variants={buttonVariants}
               onClick={() => handleNavigation("/about")}
+              aria-label="Explore Tournaments"
               className="inline-flex text-white bg-custom-blue border-0 py-2 px-6 text-base md:text-lg focus:outline-none hover:bg-custom-blue/80 rounded"
             >
               Explore Tournaments
@@ -116,6 +117,7 @@ const HeroSection = () => {
               whileHover="hover"
               variants={buttonVariants}
               onClick={() => handleNavigation("/contact")}
+              aria-label="About Us"
               className="inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 text-base md:text-lg focus:outline-none hover:bg-gray-200 rounded"
             >
               About Us
