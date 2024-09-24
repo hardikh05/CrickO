@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.js",  // Entry file (usually index.js or main.js)
+      "use": "@vercel/static-build"  // Use the static build for React apps
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)", 
+      "dest": "/index.html"  // Serve index.html for SPA routing
+    }
+  ],
+  "static": {
+    "maxAge": "1d"
+  }
+}
