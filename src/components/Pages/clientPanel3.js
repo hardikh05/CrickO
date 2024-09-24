@@ -43,126 +43,134 @@ const bowlerDataGoldGazelles = [
 
 export default function ClientPanel3() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8 text-sm">
-      <h1 className="text-2xl font-bold mb-8">T20 Live Score</h1>
+    <div className="min-h-screen bg-gray-100 p-4 md:p-8 text-sm">
+      <h1 className="text-2xl font-bold mb-4">T20 Live Score</h1>
 
       <div className="max-w-4xl mx-auto">
-        <h2 className="font-bold text-lg mb-4">Silver Sharks - Batting (220/9)</h2>
-        <table className="table-auto w-full mb-8 text-xs">
-          <thead>
-            <tr className="bg-gray-300">
-              <th className="px-4 py-2">Batter</th>
-              <th className="px-4 py-2">R</th>
-              <th className="px-4 py-2">B</th>
-              <th className="px-4 py-2">M</th>
-              <th className="px-4 py-2">4s</th>
-              <th className="px-4 py-2">6s</th>
-              <th className="px-4 py-2">SR</th>
-            </tr>
-          </thead>
-          <tbody>
-            {batsmanDataSilverSharks.map((batsman, index) => (
-              <tr key={index} className="border-b">
-                <td className="px-4 py-2">{batsman.name}</td>
-                <td className="px-4 py-2">{batsman.runs}</td>
-                <td className="px-4 py-2">{batsman.balls}</td>
-                <td className="px-4 py-2">{batsman.minutes}</td>
-                <td className="px-4 py-2">{batsman.fours}</td>
-                <td className="px-4 py-2">{batsman.sixes}</td>
-                <td className="px-4 py-2">{batsman.strikeRate}</td>
+        <h2 className="font-bold text-lg mb-2">Silver Sharks - Batting (220/9)</h2>
+        <div className="overflow-x-auto mb-4">
+          <table className="table-auto w-full text-xs">
+            <thead>
+              <tr className="bg-gray-300">
+                <th className="px-2 py-1">Batter</th>
+                <th className="px-2 py-1">R</th>
+                <th className="px-2 py-1">B</th>
+                <th className="px-2 py-1">M</th>
+                <th className="px-2 py-1">4s</th>
+                <th className="px-2 py-1">6s</th>
+                <th className="px-2 py-1">SR</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {batsmanDataSilverSharks.map((batsman, index) => (
+                <tr key={index} className="border-b">
+                  <td className="px-2 py-1">{batsman.name}</td>
+                  <td className="px-2 py-1">{batsman.runs}</td>
+                  <td className="px-2 py-1">{batsman.balls}</td>
+                  <td className="px-2 py-1">{batsman.minutes}</td>
+                  <td className="px-2 py-1">{batsman.fours}</td>
+                  <td className="px-2 py-1">{batsman.sixes}</td>
+                  <td className="px-2 py-1">{batsman.strikeRate}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-        <h2 className="font-bold text-lg mb-4">Silver Sharks - Bowling</h2>
-        <table className="table-auto w-full mb-8 text-xs">
-          <thead>
-            <tr className="bg-gray-300">
-              <th className="px-4 py-2">Bowler</th>
-              <th className="px-4 py-2">O</th>
-              <th className="px-4 py-2">M</th>
-              <th className="px-4 py-2">R</th>
-              <th className="px-4 py-2">W</th>
-              <th className="px-4 py-2">Econ</th>
-              <th className="px-4 py-2">Wd</th>
-              <th className="px-4 py-2">Nb</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bowlerDataSilverSharks.map((bowler, index) => (
-              <tr key={index} className="border-b">
-                <td className="px-4 py-2">{bowler.name}</td>
-                <td className="px-4 py-2">{bowler.overs}</td>
-                <td className="px-4 py-2">{bowler.maidens}</td>
-                <td className="px-4 py-2">{bowler.runsGiven}</td>
-                <td className="px-4 py-2">{bowler.wickets}</td>
-                <td className="px-4 py-2">{bowler.econ}</td>
-                <td className="px-4 py-2">{bowler.wides}</td>
-                <td className="px-4 py-2">{bowler.noBalls}</td>
+        <h2 className="font-bold text-lg mb-2">Silver Sharks - Bowling</h2>
+        <div className="overflow-x-auto mb-4">
+          <table className="table-auto w-full text-xs">
+            <thead>
+              <tr className="bg-gray-300">
+                <th className="px-2 py-1">Bowler</th>
+                <th className="px-2 py-1">O</th>
+                <th className="px-2 py-1">M</th>
+                <th className="px-2 py-1">R</th>
+                <th className="px-2 py-1">W</th>
+                <th className="px-2 py-1">E</th>
+                <th className="px-2 py-1">Wides</th>
+                <th className="px-2 py-1">No Balls</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {bowlerDataSilverSharks.map((bowler, index) => (
+                <tr key={index} className="border-b">
+                  <td className="px-2 py-1">{bowler.name}</td>
+                  <td className="px-2 py-1">{bowler.overs}</td>
+                  <td className="px-2 py-1">{bowler.maidens}</td>
+                  <td className="px-2 py-1">{bowler.runsGiven}</td>
+                  <td className="px-2 py-1">{bowler.wickets}</td>
+                  <td className="px-2 py-1">{bowler.econ}</td>
+                  <td className="px-2 py-1">{bowler.wides}</td>
+                  <td className="px-2 py-1">{bowler.noBalls}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-        <h2 className="font-bold text-lg mb-4">Gold Gazelles - Batting (210/8)</h2>
-        <table className="table-auto w-full mb-8 text-xs">
-          <thead>
-            <tr className="bg-yellow-100">
-              <th className="px-4 py-2">Batter</th>
-              <th className="px-4 py-2">R</th>
-              <th className="px-4 py-2">B</th>
-              <th className="px-4 py-2">M</th>
-              <th className="px-4 py-2">4s</th>
-              <th className="px-4 py-2">6s</th>
-              <th className="px-4 py-2">SR</th>
-            </tr>
-          </thead>
-          <tbody>
-            {batsmanDataGoldGazelles.map((batsman, index) => (
-              <tr key={index} className="border-b">
-                <td className="px-4 py-2">{batsman.name}</td>
-                <td className="px-4 py-2">{batsman.runs}</td>
-                <td className="px-4 py-2">{batsman.balls}</td>
-                <td className="px-4 py-2">{batsman.minutes}</td>
-                <td className="px-4 py-2">{batsman.fours}</td>
-                <td className="px-4 py-2">{batsman.sixes}</td>
-                <td className="px-4 py-2">{batsman.strikeRate}</td>
+        {/* Repeat for Gold Gazelles if needed */}
+        <h2 className="font-bold text-lg mb-2">Gold Gazelles - Batting</h2>
+        <div className="overflow-x-auto mb-4">
+          <table className="table-auto w-full text-xs">
+            <thead>
+              <tr className="bg-gray-300">
+                <th className="px-2 py-1">Batter</th>
+                <th className="px-2 py-1">R</th>
+                <th className="px-2 py-1">B</th>
+                <th className="px-2 py-1">M</th>
+                <th className="px-2 py-1">4s</th>
+                <th className="px-2 py-1">6s</th>
+                <th className="px-2 py-1">SR</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {batsmanDataGoldGazelles.map((batsman, index) => (
+                <tr key={index} className="border-b">
+                  <td className="px-2 py-1">{batsman.name}</td>
+                  <td className="px-2 py-1">{batsman.runs}</td>
+                  <td className="px-2 py-1">{batsman.balls}</td>
+                  <td className="px-2 py-1">{batsman.minutes}</td>
+                  <td className="px-2 py-1">{batsman.fours}</td>
+                  <td className="px-2 py-1">{batsman.sixes}</td>
+                  <td className="px-2 py-1">{batsman.strikeRate}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-        <h2 className="font-bold text-lg mb-4">Gold Gazelles - Bowling</h2>
-        <table className="table-auto w-full mb-8 text-xs">
-          <thead>
-            <tr className="bg-yellow-100">
-              <th className="px-4 py-2">Bowler</th>
-              <th className="px-4 py-2">O</th>
-              <th className="px-4 py-2">M</th>
-              <th className="px-4 py-2">R</th>
-              <th className="px-4 py-2">W</th>
-              <th className="px-4 py-2">Econ</th>
-              <th className="px-4 py-2">Wd</th>
-              <th className="px-4 py-2">Nb</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bowlerDataGoldGazelles.map((bowler, index) => (
-              <tr key={index} className="border-b">
-                <td className="px-4 py-2">{bowler.name}</td>
-                <td className="px-4 py-2">{bowler.overs}</td>
-                <td className="px-4 py-2">{bowler.maidens}</td>
-                <td className="px-4 py-2">{bowler.runsGiven}</td>
-                <td className="px-4 py-2">{bowler.wickets}</td>
-                <td className="px-4 py-2">{bowler.econ}</td>
-                <td className="px-4 py-2">{bowler.wides}</td>
-                <td className="px-4 py-2">{bowler.noBalls}</td>
+        <h2 className="font-bold text-lg mb-2">Gold Gazelles - Bowling</h2>
+        <div className="overflow-x-auto mb-4">
+          <table className="table-auto w-full text-xs">
+            <thead>
+              <tr className="bg-gray-300">
+                <th className="px-2 py-1">Bowler</th>
+                <th className="px-2 py-1">O</th>
+                <th className="px-2 py-1">M</th>
+                <th className="px-2 py-1">R</th>
+                <th className="px-2 py-1">W</th>
+                <th className="px-2 py-1">E</th>
+                <th className="px-2 py-1">Wides</th>
+                <th className="px-2 py-1">No Balls</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <h2 className='font-bold'>Silver Sharks won by 10 Runs</h2>
+            </thead>
+            <tbody>
+              {bowlerDataGoldGazelles.map((bowler, index) => (
+                <tr key={index} className="border-b">
+                  <td className="px-2 py-1">{bowler.name}</td>
+                  <td className="px-2 py-1">{bowler.overs}</td>
+                  <td className="px-2 py-1">{bowler.maidens}</td>
+                  <td className="px-2 py-1">{bowler.runsGiven}</td>
+                  <td className="px-2 py-1">{bowler.wickets}</td>
+                  <td className="px-2 py-1">{bowler.econ}</td>
+                  <td className="px-2 py-1">{bowler.wides}</td>
+                  <td className="px-2 py-1">{bowler.noBalls}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
