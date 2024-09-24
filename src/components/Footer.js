@@ -23,7 +23,7 @@ function Footer() {
             <br/>
             <h4>Useful Links</h4>
             <br/>
-                <ul>
+            <ul>
               <li><NavLink to="/" className="footer-link">Home</NavLink></li>
               <li><NavLink to="/about" className="footer-link">Tournaments</NavLink></li>
               <li><NavLink to="/blog" className="footer-link">LiveMatches</NavLink></li>
@@ -38,10 +38,10 @@ function Footer() {
             <p>Thank you for visiting this website. Connect with me over socials.</p>
             <br />
             <div>
-              <a href="#" className="footer-link">Facebook</a>
-              <a href="#" className="footer-link">Twitter</a>
-              <a href="#" className="footer-link">Instagram</a>
-              <a href="#" className="footer-link">LinkedIn</a>
+              <a href="https://www.facebook.com" className="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.twitter.com" className="footer-link" target="_blank" rel="noopener noreferrer">Twitter</a>
+              <a href="https://www.instagram.com" className="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.linkedin.com" className="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
           </div>
         </div>
