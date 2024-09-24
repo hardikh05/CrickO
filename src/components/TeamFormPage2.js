@@ -10,34 +10,13 @@ const roleIcons = {
 
 const TeamFormPage2 = () => {
   const [formData, setFormData] = useState({
-    player1: "",
-    player2: "",
-    player3: "",
-    player4: "",
-    player5: "",
-    player6: "",
-    player7: "",
-    player8: "",
-    player9: "",
-    player10: "",
-    player11: ""
+    player1: "", player2: "", player3: "", player4: "", player5: "", player6: "", player7: "", player8: "", player9: "", player10: "", player11: ""
   });
 
   const [roles, setRoles] = useState({
-    player1Role: "",
-    player2Role: "",
-    player3Role: "",
-    player4Role: "",
-    player5Role: "",
-    player6Role: "",
-    player7Role: "",
-    player8Role: "",
-    player9Role: "",
-    player10Role: "",
-    player11Role: ""
+    player1Role: "", player2Role: "", player3Role: "", player4Role: "", player5Role: "", player6Role: "", player7Role: "", player8Role: "", player9Role: "", player10Role: "", player11Role: ""
   });
 
-  const [selectedRole, setSelectedRole] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -62,7 +41,6 @@ const TeamFormPage2 = () => {
       ...roles,
       [`player${index + 1}Role`]: role,
     });
-    setSelectedRole(`player${index + 1}${role}`);
   };
 
   const handleSubmit = (e) => {
@@ -145,7 +123,6 @@ const TeamFormPage2 = () => {
           <motion.button
             type="submit"
             className="bg-[#1f5156] text-white px-20 py-4 rounded-md hover:bg-[#1f5156] hover:scale-105 transition duration-300 ease-in-out text-sm"
-          
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             style={{ marginLeft: "auto", marginRight: "auto", display: "block" }}
