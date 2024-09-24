@@ -13,26 +13,7 @@ const batsmanDataBlackBears = [
   { name: 'Sam', runs: 0, balls: 3, minutes: 4, fours: 0, sixes: 0, strikeRate: 0.00 }
 ];
 
-const bowlerDataBlackBears = [
-  { name: 'John', overs: 4, maidens: 0, runsGiven: 30, wickets: 2, econ: 7.50, wides: 0, noBalls: 0 },
-  { name: 'Matt', overs: 4, maidens: 0, runsGiven: 40, wickets: 3, econ: 10.00, wides: 1, noBalls: 1 },
-  { name: 'Chris', overs: 3.2, maidens: 0, runsGiven: 28, wickets: 1, econ: 8.40, wides: 2, noBalls: 0 },
-  { name: 'Rob', overs: 4, maidens: 0, runsGiven: 45, wickets: 0, econ: 11.25, wides: 0, noBalls: 0 },
-  { name: 'Nick', overs: 4, maidens: 0, runsGiven: 33, wickets: 1, econ: 8.25, wides: 1, noBalls: 0 }
-];
 
-const batsmanDataWhiteWolves = [
-  { name: 'Adam', runs: 72, balls: 48, minutes: 60, fours: 8, sixes: 2, strikeRate: 150.00 },
-  { name: 'David (c)', runs: 50, balls: 35, minutes: 40, fours: 4, sixes: 2, strikeRate: 142.86 },
-  { name: 'Oliver', runs: 20, balls: 15, minutes: 25, fours: 1, sixes: 1, strikeRate: 133.33 },
-  { name: 'Peter', runs: 18, balls: 12, minutes: 18, fours: 2, sixes: 0, strikeRate: 150.00 },
-  { name: 'George', runs: 7, balls: 9, minutes: 11, fours: 0, sixes: 0, strikeRate: 77.78 },
-  { name: 'Harry', runs: 5, balls: 7, minutes: 10, fours: 0, sixes: 0, strikeRate: 71.43 },
-  { name: 'Charlie', runs: 9, balls: 10, minutes: 15, fours: 1, sixes: 0, strikeRate: 90.00 },
-  { name: 'William', runs: 6, balls: 6, minutes: 9, fours: 1, sixes: 0, strikeRate: 100.00 },
-  { name: 'Henry', runs: 4, balls: 5, minutes: 6, fours: 0, sixes: 0, strikeRate: 80.00 },
-  { name: 'Arthur', runs: 1, balls: 2, minutes: 3, fours: 0, sixes: 0, strikeRate: 50.00 }
-];
 
 const bowlerDataWhiteWolves = [
   { name: 'Adam', overs: 4, maidens: 0, runsGiven: 35, wickets: 2, econ: 8.75, wides: 1, noBalls: 0 },
