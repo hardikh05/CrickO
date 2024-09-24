@@ -57,7 +57,7 @@ const TeamFormPage2 = () => {
 
   return (
     <motion.div
-      className="container mx-auto p-4"
+      className="container mx-auto p-4 sm:p-6 lg:p-8"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -80,8 +80,8 @@ const TeamFormPage2 = () => {
         <h2 className="text-2xl font-semibold mb-4 text-center">Add Players</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           {[...Array(11)].map((_, index) => (
-            <div key={index} className="flex items-center justify-between">
-              <div className="flex-1">
+            <div key={index} className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
+              <div className="flex-1 w-full">
                 <label className="block text-sm font-medium text-gray-700">
                   Player {index + 1}
                 </label>
@@ -90,15 +90,15 @@ const TeamFormPage2 = () => {
                   name={`player${index + 1}`}
                   value={formData[`player${index + 1}`]}
                   onChange={handleChange}
-                  className="mt-1 block w-full px-6 py-2 border border-gray-300 rounded-md text-sm focus:border-blue-500 focus:outline-none"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md text-sm focus:border-blue-500 focus:outline-none"
                   required
                 />
               </div>
-              <div className="flex items-center ml-6">
+              <div className="flex items-center justify-between w-full sm:w-auto sm:ml-6">
                 <label className="block text-lg font-medium text-gray-700 mr-2">Role:</label>
-                <div className="flex">
+                <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                   {["Batsman", "Bowler", "AllRounder"].map((role) => (
-                    <div key={role} className="mr-4 flex items-center">
+                    <div key={role} className="flex items-center">
                       <input
                         type="radio"
                         name={`role${index + 1}`}
@@ -122,10 +122,9 @@ const TeamFormPage2 = () => {
 
           <motion.button
             type="submit"
-            className="bg-[#1f5156] text-white px-20 py-4 rounded-md hover:bg-[#1f5156] hover:scale-105 transition duration-300 ease-in-out text-sm"
+            className="bg-[#1f5156] text-white px-12 py-3 rounded-md hover:bg-[#1f5156] hover:scale-105 transition duration-300 ease-in-out text-sm w-full sm:w-auto mx-auto"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            style={{ marginLeft: "auto", marginRight: "auto", display: "block" }}
           >
             Submit
           </motion.button>
