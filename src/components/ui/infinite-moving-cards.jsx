@@ -20,17 +20,18 @@ export const InfiniteMovingCards = ({
 
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
-        duplicatedItem.style.backgroundColor = "#1f5156"; 
-        duplicatedItem.style.color = "white"; 
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
+        duplicatedItem.classList.add("bg-[#1f5156]", "text-white"); // Tailwind CSS classes for background and text color
+        scrollerRef.current.appendChild(duplicatedItem);
       });
 
       getDirection();
       getSpeed();
       setStart(true);
     }
+
+    return () => {
+      // Cleanup if needed (e.g., removing event listeners)
+    };
   }, []);
 
   const getDirection = () => {
@@ -78,16 +79,11 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="card w-[200px] h-[300px] max-w-full relative rounded-lg flex-shrink-0 px-4 py-3 md:w-[250px] md:h-[350px]"
-            style={{
-              backgroundColor: "#1f5156", 
-              border: "none",
-              color: "white" 
-            }}
+            className="card w-[200px] h-[300px] max-w-full relative rounded-lg flex-shrink-0 px-4 py-3 md:w-[250px] md:h-[350px] bg-[#1f5156] border-none text-white"
           >
             <img
               src={item.image}
-              alt={item.title}
+              alt={item.title || 'Card Image'} // Use meaningful alt text
               className="w-full h-[80px] md:h-[100px] object-cover rounded-md mb-2"
             />
             <h2 className="text-sm md:text-base font-semibold">{item.title}</h2>
@@ -98,6 +94,7 @@ export const InfiniteMovingCards = ({
               style={{ color: "#f5b921" }} 
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Read more about ${item.title}`} // Add aria-label for accessibility
             >
               Read more
             </a>
