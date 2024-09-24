@@ -44,128 +44,125 @@ const bowlerDataFireBlades = [
 
 export default function ClientPanel2() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8 text-sm">
-      <h1 className="text-2xl font-bold mb-8">T20 Live Score</h1>
+    <div className="min-h-screen bg-gray-100 p-4 md:p-8 text-sm">
+      <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-8">T20 Live Score</h1>
 
       <div className="max-w-4xl mx-auto">
-        <h2 className="font-bold text-lg mb-4">Purple Panthers - Batting (220/10)</h2>
-        <table className="table-auto w-full mb-8 text-xs">
-          <thead>
-            <tr className="bg-purple-100">
-              <th className="px-4 py-2">Batter</th>
-              <th className="px-4 py-2">R</th>
-              <th className="px-4 py-2">B</th>
-              <th className="px-4 py-2">M</th>
-              <th className="px-4 py-2">4s</th>
-              <th className="px-4 py-2">6s</th>
-              <th className="px-4 py-2">SR</th>
-            </tr>
-          </thead>
-          <tbody>
-            {batsmanDataThunderbolts.map((batsman, index) => (
-              <tr key={index} className="border-b">
-                <td className="px-4 py-2">{batsman.name}</td>
-                <td className="px-4 py-2">{batsman.runs}</td>
-                <td className="px-4 py-2">{batsman.balls}</td>
-                <td className="px-4 py-2">{batsman.minutes}</td>
-                <td className="px-4 py-2">{batsman.fours}</td>
-                <td className="px-4 py-2">{batsman.sixes}</td>
-                <td className="px-4 py-2">{batsman.strikeRate}</td>
+        {/* Thunderbolts Batting */}
+        <h2 className="font-bold text-base md:text-lg mb-2 md:mb-4">Purple Panthers - Batting (220/10)</h2>
+        <div className="overflow-x-auto">
+          <table className="table-auto w-full mb-4 md:mb-8 text-xs md:text-sm">
+            <thead>
+              <tr className="bg-purple-100">
+                <th className="px-2 md:px-4 py-2">Batter</th>
+                <th className="px-2 md:px-4 py-2">R</th>
+                <th className="px-2 md:px-4 py-2">B</th>
+                <th className="px-2 md:px-4 py-2">4s</th>
+                <th className="px-2 md:px-4 py-2">6s</th>
+                <th className="px-2 md:px-4 py-2">SR</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {batsmanDataThunderbolts.map((batsman, index) => (
+                <tr key={index} className="border-b">
+                  <td className="px-2 md:px-4 py-2">{batsman.name}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.runs}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.balls}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.fours}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.sixes}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.strikeRate}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-        <h2 className="font-bold text-lg mb-4">Purple Panthers - Bowling</h2>
-        <table className="table-auto w-full mb-8 text-xs">
-          <thead>
-            <tr className="bg-purple-100">
-              <th className="px-4 py-2">Bowler</th>
-              <th className="px-4 py-2">O</th>
-              <th className="px-4 py-2">M</th>
-              <th className="px-4 py-2">R</th>
-              <th className="px-4 py-2">W</th>
-              <th className="px-4 py-2">Econ</th>
-              <th className="px-4 py-2">Wd</th>
-              <th className="px-4 py-2">Nb</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bowlerDataThunderbolts.map((bowler, index) => (
-              <tr key={index} className="border-b">
-                <td className="px-4 py-2">{bowler.name}</td>
-                <td className="px-4 py-2">{bowler.overs}</td>
-                <td className="px-4 py-2">{bowler.maidens}</td>
-                <td className="px-4 py-2">{bowler.runsGiven}</td>
-                <td className="px-4 py-2">{bowler.wickets}</td>
-                <td className="px-4 py-2">{bowler.econ}</td>
-                <td className="px-4 py-2">{bowler.wides}</td>
-                <td className="px-4 py-2">{bowler.noBalls}</td>
+        {/* Thunderbolts Bowling */}
+        <h2 className="font-bold text-base md:text-lg mb-2 md:mb-4">Purple Panthers - Bowling</h2>
+        <div className="overflow-x-auto">
+          <table className="table-auto w-full mb-4 md:mb-8 text-xs md:text-sm">
+            <thead>
+              <tr className="bg-purple-100">
+                <th className="px-2 md:px-4 py-2">Bowler</th>
+                <th className="px-2 md:px-4 py-2">O</th>
+                <th className="px-2 md:px-4 py-2">M</th>
+                <th className="px-2 md:px-4 py-2">R</th>
+                <th className="px-2 md:px-4 py-2">W</th>
+                <th className="px-2 md:px-4 py-2">Econ</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {bowlerDataThunderbolts.map((bowler, index) => (
+                <tr key={index} className="border-b">
+                  <td className="px-2 md:px-4 py-2">{bowler.name}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.overs}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.maidens}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.runsGiven}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.wickets}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.econ}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-        <h2 className="font-bold text-lg mb-4">Orange Owls
-        - Batting(212/10)</h2>
-        <table className="table-auto w-full mb-8 text-xs">
-          <thead>
-            <tr className="bg-orange-100">
-              <th className="px-4 py-2">Batter</th>
-              <th className="px-4 py-2">R</th>
-              <th className="px-4 py-2">B</th>
-              <th className="px-4 py-2">M</th>
-              <th className="px-4 py-2">4s</th>
-              <th className="px-4 py-2">6s</th>
-              <th className="px-4 py-2">SR</th>
-            </tr>
-          </thead>
-          <tbody>
-            {batsmanDataFireBlades.map((batsman, index) => (
-              <tr key={index} className="border-b">
-                <td className="px-4 py-2">{batsman.name}</td>
-                <td className="px-4 py-2">{batsman.runs}</td>
-                <td className="px-4 py-2">{batsman.balls}</td>
-                <td className="px-4 py-2">{batsman.minutes}</td>
-                <td className="px-4 py-2">{batsman.fours}</td>
-                <td className="px-4 py-2">{batsman.sixes}</td>
-                <td className="px-4 py-2">{batsman.strikeRate}</td>
+        {/* Fire Blades Batting */}
+        <h2 className="font-bold text-base md:text-lg mb-2 md:mb-4">Blue Knights - Batting (230/9)</h2>
+        <div className="overflow-x-auto">
+          <table className="table-auto w-full mb-4 md:mb-8 text-xs md:text-sm">
+            <thead>
+              <tr className="bg-blue-100">
+                <th className="px-2 md:px-4 py-2">Batter</th>
+                <th className="px-2 md:px-4 py-2">R</th>
+                <th className="px-2 md:px-4 py-2">B</th>
+                <th className="px-2 md:px-4 py-2">4s</th>
+                <th className="px-2 md:px-4 py-2">6s</th>
+                <th className="px-2 md:px-4 py-2">SR</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {batsmanDataFireBlades.map((batsman, index) => (
+                <tr key={index} className="border-b">
+                  <td className="px-2 md:px-4 py-2">{batsman.name}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.runs}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.balls}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.fours}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.sixes}</td>
+                  <td className="px-2 md:px-4 py-2">{batsman.strikeRate}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-        <h2 className="font-bold text-lg mb-4">Orange Owls
-        - Bowling</h2>
-        <table className="table-auto w-full text-xs">
-          <thead>
-            <tr className="bg-orange-100">
-              <th className="px-4 py-2">Bowler</th>
-              <th className="px-4 py-2">O</th>
-              <th className="px-4 py-2">M</th>
-              <th className="px-4 py-2">R</th>
-              <th className="px-4 py-2">W</th>
-              <th className="px-4 py-2">Econ</th>
-              <th className="px-4 py-2">Wd</th>
-              <th className="px-4 py-2">Nb</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bowlerDataFireBlades.map((bowler, index) => (
-              <tr key={index} className="border-b">
-                <td className="px-4 py-2">{bowler.name}</td>
-                <td className="px-4 py-2">{bowler.overs}</td>
-                <td className="px-4 py-2">{bowler.maidens}</td>
-                <td className="px-4 py-2">{bowler.runsGiven}</td>
-                <td className="px-4 py-2">{bowler.wickets}</td>
-                <td className="px-4 py-2">{bowler.econ}</td>
-                <td className="px-4 py-2">{bowler.wides}</td>
-                <td className="px-4 py-2">{bowler.noBalls}</td>
+        {/* Fire Blades Bowling */}
+        <h2 className="font-bold text-base md:text-lg mb-2 md:mb-4">Blue Knights - Bowling</h2>
+        <div className="overflow-x-auto">
+          <table className="table-auto w-full text-xs md:text-sm">
+            <thead>
+              <tr className="bg-blue-100">
+                <th className="px-2 md:px-4 py-2">Bowler</th>
+                <th className="px-2 md:px-4 py-2">O</th>
+                <th className="px-2 md:px-4 py-2">M</th>
+                <th className="px-2 md:px-4 py-2">R</th>
+                <th className="px-2 md:px-4 py-2">W</th>
+                <th className="px-2 md:px-4 py-2">Econ</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <h2 className='font-bold'>Purple Panthers  won by 8 Runs</h2>
+            </thead>
+            <tbody>
+              {bowlerDataFireBlades.map((bowler, index) => (
+                <tr key={index} className="border-b">
+                  <td className="px-2 md:px-4 py-2">{bowler.name}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.overs}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.maidens}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.runsGiven}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.wickets}</td>
+                  <td className="px-2 md:px-4 py-2">{bowler.econ}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
