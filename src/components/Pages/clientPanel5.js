@@ -10,23 +10,7 @@ const batsmanDataCyanCheetahs = [
   { name: 'George', runs: 5, balls: 6, minutes: 7, fours: 0, sixes: 0, strikeRate: 83.33 },
 ];
 
-const bowlerDataCyanCheetahs = [
-  { name: 'Alex', overs: 2, maidens: 0, runsGiven: 15, wickets: 1, econ: 7.50, wides: 0, noBalls: 0 },
-  { name: 'Ben', overs: 2, maidens: 0, runsGiven: 12, wickets: 0, econ: 6.00, wides: 1, noBalls: 0 },
-  { name: 'Carl', overs: 2, maidens: 0, runsGiven: 22, wickets: 1, econ: 11.00, wides: 2, noBalls: 0 },
-  { name: 'Dan', overs: 2, maidens: 0, runsGiven: 18, wickets: 2, econ: 9.00, wides: 0, noBalls: 1 },
-  { name: 'Ethan', overs: 2, maidens: 0, runsGiven: 20, wickets: 1, econ: 10.00, wides: 1, noBalls: 0 }
-];
 
-const batsmanDataMagentaMonkeys = [
-  { name: 'Jack', runs: 22, balls: 15, minutes: 20, fours: 3, sixes: 1, strikeRate: 146.67 },
-  { name: 'Tom', runs: 30, balls: 24, minutes: 28, fours: 2, sixes: 2, strikeRate: 125.00 },
-  { name: 'Harry', runs: 5, balls: 7, minutes: 9, fours: 0, sixes: 0, strikeRate: 71.43 },
-  { name: 'Mike', runs: 10, balls: 8, minutes: 12, fours: 1, sixes: 0, strikeRate: 125.00 },
-  { name: 'Will', runs: 12, balls: 9, minutes: 10, fours: 2, sixes: 0, strikeRate: 133.33 },
-  { name: 'Sam', runs: 6, balls: 4, minutes: 6, fours: 1, sixes: 0, strikeRate: 150.00 },
-  { name: 'Leo', runs: 4, balls: 5, minutes: 7, fours: 0, sixes: 0, strikeRate: 80.00 }
-];
 
 const bowlerDataMagentaMonkeys = [
   { name: 'Jack', overs: 2, maidens: 0, runsGiven: 14, wickets: 0, econ: 7.00, wides: 0, noBalls: 0 },
