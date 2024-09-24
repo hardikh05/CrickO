@@ -7,7 +7,6 @@ import React, {
   useEffect,
 } from "react";
 
-"use client";
 
 
 const MouseEnterContext = createContext(undefined);
